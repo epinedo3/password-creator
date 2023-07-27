@@ -16,7 +16,9 @@ function writePassword() {
 
 }
 // Created a function called generatePassword
+
 function generatePassword(){
+  let password = "";
   var length = prompt("Enter the amount of characters you want in your Password.");
   if( isNaN(length) === true || length < 8 || length > 128){
     alert("wrong")
@@ -49,6 +51,7 @@ function generatePassword(){
     var index = Math.floor(Math.random() * pool.length);
     password += pool[index];
   }
+  console.log(password);
   return password;
 }
 
